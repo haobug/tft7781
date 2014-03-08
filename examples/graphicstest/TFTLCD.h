@@ -1,5 +1,5 @@
 
-#include <WProgram.h>
+#include <Arduino.h>
 
 // comment or uncomment the next line for special pinout!
 //#define USE_ADAFRUIT_SHIELD_PINOUT
@@ -92,7 +92,8 @@ class TFTLCD : public Print {
   void setCursor(uint16_t x, uint16_t y);
   void setTextColor(uint16_t c);
   void setTextSize(uint8_t s);
-  virtual void write(uint8_t);
+//  virtual void write(uint8_t);
+  virtual size_t write(uint8_t);
 
   void drawChar(uint16_t x, uint16_t y, char c, uint16_t color, uint8_t s = 1);
   void drawString(uint16_t x, uint16_t y, char *c, uint16_t color, uint8_t s = 1);
